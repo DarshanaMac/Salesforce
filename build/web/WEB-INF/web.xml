@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>LoginStudent</servlet-name>
+        <servlet-class>help.desk.controls.LoginStudent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginStudent</servlet-name>
+        <url-pattern>/LoginStudent</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DashBoard</servlet-name>
+        <servlet-class>help.desk.controls.DashBoard</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashBoard</servlet-name>
+        <url-pattern>/DashBoard</url-pattern>
+    </servlet-mapping>
+</web-app>
