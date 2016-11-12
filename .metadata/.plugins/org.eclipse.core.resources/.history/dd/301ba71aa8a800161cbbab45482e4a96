@@ -1,0 +1,27 @@
+package com.leons.validations;
+
+import java.sql.PreparedStatement;
+
+public class CheckUser 
+{
+	public static boolean checkUser(String username, String password) 
+    {
+        boolean student = false;
+        try 
+        {
+            PreparedStatement ps = DBConnector.dbconn().prepareStatement("select * from login where username=? and password=?");
+
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ResultSet rs = ps.executeQuery();
+            student = rs.next();
+        } 
+        catch (Exception e) 
+        {
+            System.out.println(e.getMessage());
+        } 
+        return student;
+    }
+    
+
+}
